@@ -1,0 +1,207 @@
+﻿.carousel {
+    position: relative;
+    height: 250px;
+    width: 1000px;
+    background: url(../Images/Banner/loader.gif) center center no-repeat;
+    margin-bottom: 10px;
+}
+
+    .carousel .next, .carousel .prev {
+        display: none;
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        margin-top: -28px;
+        z-index: 99;
+        cursor: pointer;
+    }
+
+    .carousel .prev {
+        margin-left: -60px;
+        background: url(../Images/Banner/prev.png) 0 0 no-repeat;
+    }
+
+    .carousel .next {
+        margin-right: -60px;
+        background: url(../Images/Banner/next.png) 0 0 no-repeat;
+    }
+
+    .carousel li {
+        display: none;
+    }
+
+.paging {
+    position: absolute;
+    z-index: 99;
+}
+
+    .paging > a {
+        display: block;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        float: left;
+        background: url(../Images/Banner/lightGreydot.png) 0px 0px no-repeat;
+    }
+
+        .paging > a:hover, .paging > a.current {
+            background: url(../Images/Banner/darkGreydot.png) 0px 0px no-repeat;
+        }
+
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+.productDetail {
+    float: left;
+    position: relative;
+    width: 600px;
+    background-color: #010101;
+    margin-bottom: 10px;
+}
+
+    .productDetail img {
+        padding-left: 50px;
+        position: relative;
+        left: 12%;
+    }
+
+    .productDetail .next, .carousel .prev {
+        display: none;
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        margin-top: -28px;
+        z-index: 99;
+        cursor: pointer;
+    }
+
+    .productDetail .prev {
+        margin-left: -60px;
+    }
+
+    .productDetail .next {
+        margin-right: -60px;
+    }
+
+    .productDetail li {
+        display: none;
+        background-color: #010101;
+    }
+
+        .productDetail li img {
+            display: block;
+            position: relative;
+        }
+
+.showMovie {
+    float: left;
+    height: 150px;
+    width: 1000px;
+    background-image: url(../Images/Banner/1.jpg);
+}
+
+    .showMovie a {
+        position: relative;
+        top: 70%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+        display: block;
+        width: 70px;
+        height: 60px;
+        background: url(../Images/youtube.png) no-repeat;
+    }
+
+.detailDescriptionBox {
+    width: 1000px;
+    background: #000;
+    padding: 10px;
+    padding-top: 20px;
+    transition: 0.5s;
+    float: left;
+    margin: 15px 0px 20px;
+    padding: 10px;
+    padding-top: 15px;
+    margin-top: -1px;
+}
+
+.borderDescriptionBox {
+    margin-top: -1px;
+    padding: 25px 10px 10px 10px;
+    border-bottom: solid 2px #95824F;
+}
+
+.detailBox {
+    float: right;
+    width: 390px;
+    height: 260px;
+    padding: 20px 10px 10px 10px;
+    padding-left: 10px;
+    border: dashed 2px #95824F;
+    border-radius: 8px;
+}
+
+    .detailBox div {
+        position: relative;
+        height: auto;
+        background: #000;
+        border-radius: 8px;
+        margin: 0 5px 5px 0;
+        padding: 5px;
+        transition: 0.5s;
+    }
+
+    .detailBox h1 {
+        font-size: 17px;
+        color: #95824F;
+        text-decoration: underline;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .detailBox h2 {
+        font-size: 17px;
+        padding-left: 5px;
+        margin-bottom: 15px;
+    }
+
+    .detailBox p {
+        padding: 5px 0px 0px 0px;
+        margin-bottom: 0px !important;
+    }
+
+        .detailBox p .big {
+            font-size: 14px;
+            padding: 0px;
+        }
+
+        .detailBox p .strike {
+            text-decoration: line-through;
+        }
+
+    .detailBox div p {
+        top: 25%;
+        vertical-align: middle;
+    }
+
+    .detailBox div input {
+        display: block;
+        position: relative;
+        left: 50%;
+    }
+
+.detailBoxAction {
+    float: right;
+    width: 380px;
+    margin: 10px;
+}

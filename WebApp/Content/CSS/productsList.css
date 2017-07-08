@@ -1,0 +1,53 @@
+﻿.products-list {  height: auto; }
+.products-list .item { width: 228px; height: 345px; background: #000; float: left; border: dashed 2px #eee; border-radius: 8px; margin: 0 20px 20px 0; transition: 0.5s; }
+.products-list .item:hover { border-color: #95824F; transition: 0.5s; }
+.products-list .picture { width: 215px; height: 175px; margin: 15px auto 10px; text-align: center; }
+.products-list .picture img { width: 185px; max-height: 185px; display: block; margin: 0 auto; }
+.products-list .description { display:block; width: 215px;  margin: 0 auto 10px; font-size: 11px; color: #95824F; text-align: center; }
+.products-list .actions { width: auto; height: 30px; margin: 5px auto; float:left; align-content:center}
+.products-list .stars { width: auto;  margin: 10px 10px 10px 15px; float:left; align-content:center}
+.products-list .price { background: #010101; height: 30px; line-height: 30px; width: 100%; float: left; display: block; border-radius: 5px; text-align: center; color: #95824F; font-size: 20px; }
+.products-list .priceOf {margin-left:15px;  background: #010101;  width: 80%; float: left; display: block; border-radius: 5px;  color: #95824F; font-size: 15px;  }
+.products-list .priceOf .line-throutgh {text-decoration:line-through; }
+.products-list .priceBy {margin-left:15px; margin-top:5px; background: #010101; height: 30px; line-height: 30px; width: 80%; float: left; display: block; border-radius: 5px;  color: #95824F; font-size: 25px; }
+.products-list .priceInstallment {margin-left:15px; background: #010101; height: 15px; line-height: 15px; width: 80%; float: left; display: block; border-radius: 5px;  color: #95824F; font-size: 11px;  }
+.products-list .add { background-color: #95824F; background-position: 5px -43px; height: 30px; line-height: 0px; width: 103px; float: right; display: block; border-radius: 5px; text-align: center; color: #000; font-size: 14px; transition: 0.5s; }
+.products-list .add:hover { background-color: #95824F; color:#FFF; background-position: 5px -84px; transition: 0.5s; }
+.products-list .add span { display: block; float: right; line-height: 13px; margin-right: 8px; padding-top: 1px; text-align: center; width: 65px; }
+
+.products-list .have { background-color: #95824F; height: 30px; line-height: 0px; width: 80px; float: left; display: block; border-radius: 5px; text-align: center; color: #000; font-size: 14px; transition: 0.5s; }
+.products-list .have:hover { background-color: #95824F; color:#FFF;transition: 0.5s; }
+.products-list .have span { display: block; float: right; line-height: 13px; margin-right: 8px; padding-top: 1px; text-align: center; width: 65px; }
+
+.products-list .link-more { padding: 20px; border: 1px solid #ccc; background: #f9f9f9; text-align: center; clear: both; display: block; border-radius: 5px; cursor: pointer; color: #444; font-size: 14px; font-weight: bold; }
+.products-list .next { visibility: hidden; }
+/*.products { height: 515px; overflow-y: scroll; }
+.products::-webkit-scrollbar { width: 12px; }
+.products::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px #ccc; border-radius: 5px; }
+.products::-webkit-scrollbar-thumb { border-radius: 10px; background: #f9f9f9; -webkit-box-shadow: inset 0 0 6px #001; }
+.products::-webkit-scrollbar-thumb:window-inactive { background: #001; }*/
+
+
+.parceiro-list {  height: auto; }
+.parceiro-list .item { width: 228px; height: 280px; background: #000; float: left; border: dashed 2px #eee; border-radius: 8px; margin: 0 20px 10px 0; transition: 0.5s; }
+.parceiro-list .item:hover { border-color: #95824F; transition: 0.5s; }
+.parceiro-list .picture { width: 215px; height: 175px; margin: 15px auto 10px; text-align: center; }
+.parceiro-list .picture img { width: 185px; max-height: 185px; display: block; margin: 0 auto; }
+.parceiro-list  .description { display:block; width: 215px;  margin: 0 auto 10px; font-size: 11px; color: #95824F; text-align: center; }
+.parceiro-list  .actions { width: auto; height: 30px; margin: 5px auto; float:left; align-content:center}
+.parceiro-list  .stars { width: auto;  margin: 10px 10px 10px 15px; float:left; align-content:center}
+.parceiro-list  .price { background: #010101; height: 30px; line-height: 30px; width: 100%; float: left; display: block; border-radius: 5px; text-align: center; color: #95824F; font-size: 20px; }
+.parceiro-list  .priceOf {margin-left:15px;  background: #010101;  width: 80%; float: left; display: block; border-radius: 5px;  color: #95824F; font-size: 15px;  }
+.parceiro-list  .priceOf .line-throutgh {text-decoration:line-through; }
+.parceiro-list  .priceBy {margin-left:15px; margin-top:5px; background: #010101; height: 30px; line-height: 30px; width: 80%; float: left; display: block; border-radius: 5px;  color: #95824F; font-size: 25px; }
+.parceiro-list  .priceInstallment {margin-left:15px; background: #010101; height: 15px; line-height: 15px; width: 80%; float: left; display: block; border-radius: 5px;  color: #95824F; font-size: 11px;  }
+.parceiro-list  .add { background-color: #95824F; background-position: 5px -43px; height: 30px; line-height: 0px; width: 103px; float: right; display: block; border-radius: 5px; text-align: center; color: #000; font-size: 14px; transition: 0.5s; }
+.parceiro-list  .add:hover { background-color: #95824F; color:#FFF; background-position: 5px -84px; transition: 0.5s; }
+.parceiro-list  .add span { display: block; float: right; line-height: 13px; margin-right: 8px; padding-top: 1px; text-align: center; width: 65px; }
+
+.parceiro-list  .have { background-color: #95824F; height: 30px; line-height: 0px; width: 80px; float: left; display: block; border-radius: 5px; text-align: center; color: #000; font-size: 14px; transition: 0.5s; }
+.parceiro-list  .have:hover { background-color: #95824F; color:#FFF;transition: 0.5s; }
+.parceiro-list  .have span { display: block; float: right; line-height: 13px; margin-right: 8px; padding-top: 1px; text-align: center; width: 65px; }
+
+.parceiro-list  .link-more { padding: 20px; border: 1px solid #ccc; background: #f9f9f9; text-align: center; clear: both; display: block; border-radius: 5px; cursor: pointer; color: #444; font-size: 14px; font-weight: bold; }
+.parceiro-list  .next { visibility: hidden; }

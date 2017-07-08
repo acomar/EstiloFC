@@ -1,0 +1,4 @@
+﻿.search {float: right; margin-right: 10px; margin-top: 7px; position: relative; width: 250px;}
+.search .form-field {margin-bottom: 0;}
+.search .form-field .text {width: 250px; height: 41px; line-height: 35px; font-size: 18px; border: none; padding: 5px 85px 0 10px; border-radius: 6px; color: #000; }
+.search .btn {font-size: 18px; color: #000; position: absolute; right: 5px; top: 3px; width: 70px; height: 35px; padding: 0;}

@@ -1,0 +1,18 @@
+﻿@using Infrastructure.Resources
+@model Application.ViewModel.OrderViewModel
+@section scripts {
+    @Scripts.Render("~/Scripts/Basket/basket")
+
+}
+<h2 class="page-title">@CartResource.Title </h2>
+<p id="basketIntro" class="intro" style=" width:470px; float:left;">@CartResource.Intro</p>
+
+<div id="basket"></div>
+<div class="promo-code" style="float:right;">
+    <span class="code-item">
+        <label for="number">Código Promocional</label>
+        <input class="form-text" id="promoCode" name="PromoCode" type="text"><input type="button" id="btnPromoCode" class="btn" value="Aplicar">
+    </span>
+</div>
+<input type="button" id="basketClear" class="btn clear" style="margin-top: 15px;" value="@CartResource.Clear">
+@Html.Partial("_CheckoutPurchase", Model)

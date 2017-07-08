@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="page-title">Minha coleção</h2>
+<ul class="products-list">
+    @foreach (var item in Model)
+    {
+
+        <a href="@Url.Action("Detail", "Product", new { id = item.Product.Id })">
+            <li class="item" itemscope itemtype="http://schema.org/Product">
+                <div class="picture">
+
+                    <img src="@item.Product.ImagePath(item.IHave)" alt="@item.Product.ImageName" itemprop="image" />
+
+                </div>
+                <input type="hidden" itemprop="brand" value="@item.Product.Brand" />
+                <p class="description">
+                    <span itemprop="model">@item.Product.Type</span>
+                    -
+                    <span itemprop="name">@item.Product.Name - @item.Product.ComplementName</span>
+                </p>
+                <div class="actions">
+                    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span class="price" itemprop="price">@item.Product.Price.GetSallingPrice().ToString("C", new System.Globalization.CultureInfo("pt-BR"))</span>
+                    </div>
+                    @if (!item.IHave)
+                    {
+                        <a href="@Url.Action("Detail", "Product", new { id = item.Product.Id })">
+                            <button class="add">
+                                <span>@Infrastructure.Resources.ProductResource.Buy</span>
+                            </button>
+                        </a>
+                    }
+
+                </div>
+            </li>
+        </a>
+
+    }
+</ul>

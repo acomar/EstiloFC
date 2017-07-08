@@ -1,0 +1,28 @@
+﻿*{list-style: none; margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; 
+-ms-box-sizing: border-box; box-sizing: border-box;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section, main{display: block;}
+audio,canvas,video{display: inline;}
+html{ms-text-size-adjust: 100%;	webkit-text-size-adjust: 100%;}
+body,button,input,select,textarea{font-family: sans-serif; color:#fff}
+a{text-decoration: none;}
+a:active{border: none;outline: 0;}
+pre,code,kbd,samp{font-family: monospace, serif;}
+pre{white-space: pre-wrap; word-wrap: break-word;}
+q{quotes: none;}
+q:before,q:after{content: none;}
+sub,sup{font-size: 75%;	line-height: 0;	position: relative;	vertical-align: baseline;}
+sup{top: -.5em;}
+sub{bottom: -.25em;}
+img{border: 0;	-ms-interpolation-mode:bicubic}
+svg:not(:root){	overflow: hidden;}
+legend{	border: 0;}
+button,input,select,textarea{vertical-align: middle;}
+button,input{line-height: normal;}
+button,input[type=button],input[type=reset],input[type=submit]{	border: none;	cursor: pointer;	overflow: visible;	-webkit-appearance: button;}
+input[type=search]{	box-sizing: content-box; -moz-box-sizing: content-box; -webkit-appearance: textfield;	-webkit-box-sizing: content-box;}
+input[type=search]::-webkit-search-decoration{webkit-appearance: none;}
+button::-moz-focus-inner,
+input::-moz-focus-inner{border: 0;padding: 0;}
+textarea{overflow: auto; vertical-align: top;  resize: none; font-size: 12px;}
+table{border-collapse: collapse; border-spacing: 0;}
+audio:not([controls]),[hidden]{	display: none;}

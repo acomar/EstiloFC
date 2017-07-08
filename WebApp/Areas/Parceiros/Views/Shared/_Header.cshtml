@@ -1,0 +1,27 @@
+﻿@using Infrastructure.Resources
+@using Application.Services
+<div class="top-bar">
+    <div class="inner">
+            <p id="textLogin" style="display:none">
+                @LoginResource.MakeYours <a id="showModalLogin" href="#" class="show-modal" data-modal="modal-login" title="@LoginResource.MakeYours">@LoginResource.Title</a>.
+                @LoginResource.NotYetRegistered  <a href="@Url.Action("Register", "Account")" title="Cadsatre-se">@LoginResource.RegistersUp </a>
+            </p>
+    </div>
+
+</div>
+<header class="main-header">
+    <div class="inner">
+        <div style="float:left">
+            <h1 class="logo">
+                <a href="@Url.Action("Index", "Home")" title="Início">@HomeResource.SubTitle</a>
+            </h1>
+        </div>
+        <div class="top-parceiro">
+            <h2>
+                Bem vindo ao programa de Parceiros da EstiloFC.com, a loja feita por boleiros, para boleiros.
+                Aqui, você gera lucro real para você com toda a praticidade que só nós oferecemos.
+            </h2>
+        </div>
+    </div>
+    @Html.Partial("_Menu")
+</header>

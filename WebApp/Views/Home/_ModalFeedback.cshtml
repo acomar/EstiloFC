@@ -1,0 +1,18 @@
+﻿@using Infrastructure.Resources
+<div id="modalFeedback" tabindex="-1">
+	<div class="modal-feedback">            
+		<h3 class="title">@FeedbackResource.Title</h3>
+		<div class="content">
+			<p>@FeedbackResource.Introduction</p>
+            <form action="#" id="formFeedback" class="form form-cadastro">
+			    <span class="form-item">
+				    <textarea id="description" name="description" class="form-textarea" maxlength="400"></textarea>
+			    </span>	
+			    <span class="form-item actions">
+				    <input type="button" id="sendFeedback" value="@FeedbackResource.Send" class="btn">
+			    </span>	
+            </form>
+		</div>	
+        <script src="@Url.Content("~/Scripts/Views/Home/modalFeedback.js")"></script>
+	</div>
+</div>

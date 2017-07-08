@@ -1,0 +1,4 @@
+﻿.content-wrapper:after,
+.products-list:after,
+#modal .content:after,
+.clear:after { content: "."; display: block; height: 0px; overflow: hidden; visibility: hidden; clear: both; }

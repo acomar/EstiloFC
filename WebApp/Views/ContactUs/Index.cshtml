@@ -1,0 +1,29 @@
+﻿@using Infrastructure.Resources
+@section description
+{
+    <title>@ContactUsResource.Title @HomeResource.TagTitle</title>
+    <meta name="description" content="@ContactUsResource.Introduction">
+}
+@section scripts {
+    @Scripts.Render("~/Scripts/ContactUs/contactUs")
+}
+<h2 class="page-title">@ContactUsResource.Title</h2>
+<p class="intro">@ContactUsResource.Introduction</p>
+<p id="successSendMessage" class="mensagem"></p>
+<form id="formContactUs" action="#" method="post" class="form form-contato">
+	<span class="form-item">
+		<label for="nome">@ContactUsResource.Name</label>
+		<input type="text" class="form-text" id="contactName" name="name" maxlength="30">
+	</span>
+	<span class="form-item">
+		<label for="email">@ContactUsResource.Email</label>
+		<input type="text" class="form-text" id="contactEmail" name="email" maxlength="30">
+	</span>		
+	<span class="form-item full">
+		<label for="mensagem">@ContactUsResource.GiveMessage</label>
+		<textarea id="contactMessage" name="message" class="form-textarea" maxlength="1500"></textarea>
+	</span>	
+	<span class="form-item actions">
+		<input type="button" id="sendContactUs" value="@ContactUsResource.Send" class="btn">
+	</span>																		
+</form>

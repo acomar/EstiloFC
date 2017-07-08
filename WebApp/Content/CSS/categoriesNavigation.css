@@ -1,0 +1,15 @@
+﻿.side-bar { width: 235px; height: auto; float: left; position: relative; }
+.categories .title { background-color: #95824F; background-position: 180px 10px; height: 55px; line-height: 50px; font-size: 26px; color: #000010; font-weight: normal; padding-left: 15px; border-radius: 8px 8px 0 0; }
+.categories > ul { margin-top: -5px; }
+    .categories > ul > li { width: 235px; }
+        /*.categories > ul > li .submenu { display: none; }*/
+        .categories > ul > li > a { color: #000; font-size: 18px; background-color: #95824F; height: 35px; border-bottom: solid 1px #000; line-height: 35px; padding-left: 15px; display: block; background-position: 215px 12px; transition: 0.5s; }
+            /*.categories > ul > li > a:hover { background-color: #000010; color:#FFF;  transition: 0.5s; }*/
+            .categories > ul > li > a.active { background-position: 215px -27px; }
+        .categories > ul > li:first-child > a { border-radius: 8px 0 0 0; }
+        .categories > ul > li:last-child > a { border-radius: 0 0 8px 8px; border-bottom: none; }
+            .categories > ul > li:last-child > a.active { border-radius: 0; border-bottom: solid 1px #000; }
+                .categories > ul > li:last-child > a.active + .submenu li:last-child a { border-radius: 0 0 8px 8px; }
+.categories .submenu li a { background: #95824F; color: #000; display: block; height: 35px; line-height: 35px; font-size: 16px; padding-left: 25px; }
+    .categories .submenu li a:hover,
+    .categories .submenu li a.active { background: #FAFAFA; color: #000; }

@@ -1,0 +1,7 @@
+﻿.page-title { color: #95824F; font-size: 25px; font-weight: normal; border-bottom: solid 1px #95824F; padding-bottom: 5px; margin-bottom: 30px; }
+.subtitle { color: #95824F; font-size: 20px; font-weight: normal; border-bottom: solid 1px #95824F; padding-bottom: 5px; margin: 30px 0; clear: both; }
+.intro { font-size: 16px; margin-bottom: 30px; color: #95824F; }
+    .intro a { font-weight: bold; color: #95824F; text-decoration: underline; }
+.mensagem { font-size: 16px; margin-bottom: 30px; color: #95824F; }
+.institucional-list { color: #FFF; font-size: 16px; font-weight: normal; padding-left: 25px; margin: 35px 0; clear: both; }
+    .institucional-list li { list-style: disc; padding-bottom: 5px; }

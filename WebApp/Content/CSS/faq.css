@@ -1,0 +1,12 @@
+﻿.faq { font-size: 16px; color:#FFF }
+    .faq .question { margin-bottom: 15px; border-bottom: dotted 1px #95824F; padding-bottom: 15px; }
+        .faq .question:last-child { border: none; }
+        .faq .question dt { font-size: 16px; color: #95824F; font-weight: bold; cursor: pointer; padding-bottom: 20px; }
+        .faq .question dd { font-size: 14px; margin-top: 5px; }
+
+.modal-login .form-item.link { float: left; width: 170px; margin-top: 10px; }
+    .modal-login .form-item.link a { color: #999; text-decoration: underline; font-size: 14px; }
+.modal-login .form-item.actions { float: right; margin: 0; padding: 0; width: auto; }
+.modal-login .call-to-action { background: #95824F; border-radius: 0 0 7px 7px; float: left; height: 40px; line-height: 40px; text-align: center; margin: 10px 0 -20px -20px; width: 400px; color: #000; font-size: 14px; }
+    .modal-login .call-to-action a { color: #010101; text-decoration: underline; }
+        .enum-list li { list-style: decimal; padding-bottom: 2px; }

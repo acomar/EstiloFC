@@ -1,0 +1,32 @@
+﻿
+.pedido-finalizado
+{
+    background: #000;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    padding: 30px;
+    width: 600px;
+}
+
+.pedido-finalizado p a
+{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.pedido-finalizado p span, .pedido-finalizado p b, .pedido-finalizado p a
+{
+    color: #95824F;
+}
+
+.pedido-finalizado .assinatura
+{
+    color: #95824F;
+    font-style: italic;
+}
+.orderDone p{ 
+    font-size:12px;
+    line-height:1.5px;
+}

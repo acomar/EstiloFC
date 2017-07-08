@@ -1,0 +1,27 @@
+﻿@using Infrastructure.Resources
+@model Application.ViewModel.SideMenuViewModel
+
+<div class="side-bar inner">
+    <nav class="categories">
+        <h2 class="title">@SideBarResource.Categories</h2>
+        <ul>
+            @foreach (var menu in Model.Menu)
+            {
+                <li>
+                    <a class="active" href="#" title="@menu.Name">@menu.Name</a>
+         
+                    <ul class="active submenu">
+                        @foreach (var subMenu in menu.ProductCategoryChields)
+                        {
+                            <li>
+                                @Html.ActionLink(subMenu.Name, subMenu.NameForRoute, subMenu.RootCategory.NameForRoute, null, new { title = @subMenu.Name })
+                            </li>
+                        }
+                    </ul>
+                </li>
+            }
+        </ul>
+    </nav>
+    
+  @Html.Partial("_Facebox")
+</div>

@@ -1,0 +1,6 @@
+﻿.content-wrapper { width: 1000px; height: auto; margin: 10px auto 50px; }
+.main-content { width: 745px; float: right; }
+.full-content { width: 1000px; height: auto; }
+    .full-content p { font-size: 16px; margin-bottom: 15px; color: #FFF; }
+    .full-content .ulAbout li { font-size: 16px; margin-bottom: 20px; margin-left: 22px; color: #FFF; list-style-type: disc; }
+    .full-content b { color: #95824F; }

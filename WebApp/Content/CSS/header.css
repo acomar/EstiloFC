@@ -1,0 +1,27 @@
+﻿.main-header {
+    width: 100%;
+    height: auto;
+}
+
+    .main-header .inner {
+         width: 1000px;
+        margin: 0 auto;
+        height: 140px;
+    }
+
+    .main-header .logo {
+        float: left;
+        margin-top: 12px;
+    }
+
+        .main-header .logo a {
+            display: block;
+            height: 100%;
+            background: url(../Images/logo.png) no-repeat;
+            width: 300px;
+            height: 138px;
+            color: #8c0000;
+            font-size: 24px;
+            line-height: 60px;
+            text-indent: -9999px;
+        }

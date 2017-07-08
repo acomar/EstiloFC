@@ -1,0 +1,43 @@
+﻿@using Infrastructure.Resources
+@model Application.ViewModel.OrderViewModel
+
+<form action="#" id="formOrder" class="form form-entrega">
+    <h2 class="subtitle">
+        @CartResource.InformationForDelivery
+    </h2>
+    <input id="hdnPromoCode" name="promoCode" type="hidden" value="" />
+    <span class="form-item">
+        <label for="zipCode">@CartResource.ZipCode</label>
+        @Html.TextBoxFor(x => x.Address.ZipCode, new { id = "zipCode", @class = "form-text", rel = "cep", maxlength = "12" })
+    </span>
+    <span class="form-item">
+        <label for="address">@CartResource.Address</label>
+        @Html.TextBoxFor(x => x.Address.Address, new { id = "address", @class = "form-text", maxlength = "100" })
+    </span>
+    <span class="form-item">
+        <label for="number">@CartResource.Number</label>
+        @Html.TextBoxFor(x => x.Address.Number, new { id = "number", @class = "form-text", rel = "number" })
+    </span>
+    <span class="form-item">
+        <label for="complement">@CartResource.Complement</label>
+        @Html.TextBoxFor(x => x.Address.Complement, new { id = "complement", @class = "form-text", maxlength = "20" })
+    </span>
+    <span class="form-item">
+        <label for="neighborhood">@CartResource.Neighborhood</label>
+        @Html.TextBoxFor(x => x.Address.Neighborhood, new { id = "neighborhood", @class = "form-text", maxlength = "100" })
+    </span>
+    <span class="form-item">
+        <label for="state">@CartResource.State</label>
+        @Html.DropDownListFor(x => x.IdState, Model.States, new { id = "state", @class = "form-select" })
+    </span>
+    <span class="form-item">
+        <label for="state">@CartResource.City</label>
+        <input type="hidden" id="hdnIdCity" value="@Model.IdCity" />
+        <select id="city" name="Address.IdCity" class="form-select"></select>
+    </span>
+    
+    <div class="actions">
+        <a href="@Url.Action("Index", "Home")" class="btn continuar">@CartResource.ContinueShopping</a>
+        <input type="button" id="finalizeOrder" class="btn finalizar" value="@CartResource.Checkout">
+    </div>
+</form>

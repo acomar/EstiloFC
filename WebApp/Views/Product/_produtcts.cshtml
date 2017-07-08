@@ -1,0 +1,60 @@
+﻿@using System.Globalization
+@using Infrastructure.Resources
+@model Application.ViewModel.ProductsViewModel
+@{
+    Layout = null;
+}
+@if (Model.AnyItens())
+{
+    <h2>@Model.NoProductsMessage()</h2>
+}
+else
+{
+
+    <ul class="products-list">
+        @foreach (var product in Model.Products)
+        {
+            <li class="item" itemscope itemtype="http://schema.org/Product">
+                <a href="@Url.Action("Detail", "Product" , new { id=product.Id })">
+
+                    <div class="picture">
+                        <img src="@product.ImagePath()" alt="@product.ImageName" itemprop="image" />
+                    </div>
+                    <input type="hidden" itemprop="brand" value="@product.Brand" />
+                    <p class="description">
+                        <span itemprop="name">@product.Name - @product.ComplementName</span>
+                    </p>
+                </a>
+                <div class="stars">
+                    <input name="star @product.Id" type="radio" class="star" />
+                    <input name="star @product.Id" type="radio" class="star" />
+                    <input name="star @product.Id" type="radio" class="star" />
+                    <input name="star @product.Id" type="radio" class="star" />
+                    <input name="star @product.Id" type="radio" class="star" checked="checked" />
+                </div>
+                <div class="actions">
+                    <a href="@Url.Action("Detail", "Product", new { id= product.Id })">
+                        <button class="add">
+                            @Html.Hidden("IdProduct", product.Id)
+                            @Html.Hidden("Name", product.Name)
+                            @Html.Hidden("Description", product.ProductAndDescription())
+                            @Html.Hidden("SellingPrice", product.Price.GetSallingPrice())
+                            @Html.Hidden("ImagePath", product.ImagePath())
+                            <span>@ProductResource.Buy</span>
+                        </button>
+                    </a>
+                </div>
+                @if (product.Price.OnSale)
+                {
+                    <span class="priceOf">De <span class="line-throutgh">@product.Price.Selling.ToString("C", new CultureInfo("pt-BR"))</span></span>
+                }
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <span class="priceBy" itemprop="price">Por @product.Price.GetSallingPrice().ToString("C", new CultureInfo("pt-BR"))</span>
+                </div>
+                <span class="priceInstallment">@product.Price.GetInstallment(3)</span>
+            </li>
+
+
+        }
+    </ul>
+}

@@ -1,0 +1,42 @@
+﻿@using Infrastructure.Resources
+<footer id="footer" class="footer">
+    <div class="inner">
+      
+        <ul class="site-map">
+            <li><h3>@FooterResource.Institucional</h3></li>
+            <li><a href="@Url.Action("About", "Institutional")" title="@FooterResource.About">@FooterResource.About</a></li>
+            <li><a href="@Url.Action("PrivacyPolicy", "Institutional")" title="@FooterResource.PrivacyPolicy">@FooterResource.PrivacyPolicy</a></li>
+            <li><a href="@Url.Action("TermsOfUse", "Institutional")" title="@FooterResource.TermsOfUse">@FooterResource.TermsOfUse</a></li>
+        </ul>
+        <ul class="site-map">
+            <li><h3>@FooterResource.Help</h3></li>
+            <li><a href="@Url.Action("Index", "FrequentlyAsked")" title="@FooterResource.Deliveries">@FooterResource.Deliveries</a></li>
+            <li><a href="@Url.Action("Index", "FrequentlyAsked")" title="@FooterResource.Payments">@FooterResource.Payments</a></li>
+            <li><a href="@Url.Action("Exchanges", "Help")" title="@FooterResource.Exchanges">@FooterResource.Exchanges</a></li>
+            <li><a href="@Url.Action("Index", "FrequentlyAsked")" title="@FooterResource.Cancellations">@FooterResource.Cancellations</a></li>
+            <li><a href="@Url.Action("Index", "FrequentlyAsked")" title="@FooterResource.TableSize">@FooterResource.TableSize</a></li>
+        </ul>
+        <ul class="site-map-big">
+            <li><h3>Central de Relacionamento</h3></li>
+       
+            <li><a href="#" class="showModalFeedback" title="@MenuResource.WhatDidYouThink">@MenuResource.WhatDidYouThink</a></li>
+            <li><a href="@Url.Action("Index", "ContactUs")" title="@FooterResource.SendMessage">@FooterResource.SendMessage</a></li>
+            <li>Whatsapp 24h: (11) 95080-2820</li>
+        </ul>
+  
+        <ul class="site-map-big">
+            <li><h3>Formas de pagamento</h3></li>
+            <li>
+                <a href="https://pagseguro.uol.com.br" target="_blank"><img alt="Logotipos de meios de pagamento do PagSeguro" src="~/Content/Images/PaymentIcons/btnPreferenciaCartoesBR.png" title="Este site aceita pagamentos com Visa, MasterCard, Diners, American Express, Hipercard, Aura, Elo, PLENOCard, PersonalCard, BrasilCard, FORTBRASIL, Cabal, Mais!, Avista, Grandcard, Sorocred, Bradesco, Itaú, Banco do Brasil, Banrisul, Banco HSBC, saldo em conta PagSeguro e boleto." border="0"></a>
+            </li>
+        </ul>
+        <ul class="social-media">
+            <li><h3>@FooterResource.SocialNetworks</h3></li>
+            <li><a href="http://www.facebook.com.br/EstiloFC" target="_blank" class="facebook" title="@FooterResource.Facebook">@FooterResource.Facebook</a></li>
+            <li><a href="http://www.instagram.com/lojaestilofc" target="_blank" class="instagram" title="@FooterResource.Instagram">@FooterResource.Instagram</a></li>
+        </ul>
+        <address class="rights">
+            <small>@FooterResource.Since &reg; @FooterResource.AllRightsReserved</small>
+        </address>
+    </div>
+</footer>

@@ -1,0 +1,48 @@
+﻿@using Infrastructure.Resources
+@model Application.ViewModel.UserViewModel
+@section scripts {
+    @Scripts.Render("~/Scripts/EditUser/editUser")
+}
+<h2 class="page-title">@AccountResource.RegisterTitle</h2>
+<p class="intro">@AccountResource.DescriptionRegister</p>
+<form id="formRegisterEdit" action="#" method="post" class="form form-cadastro">
+    <span class="form-item">
+        <label for="firstName">@AccountResource.Name</label>
+        <input type="text" class="form-text" id="firstName" name="firstName" value="@Model.FirstName" maxlength="30">
+    </span>
+    <span class="form-item">
+        <label for="lastName">@AccountResource.LastName</label>
+        <input type="text" class="form-text" id="lastName" name="lastName" value="@Model.LastName" maxlength="30">
+    </span>
+    <span class="form-item">
+        <label for="cpf">@AccountResource.Cpf</label>
+        <input type="text" class="form-text" id="cpf" name="cpf" value="@Model.Cpf" >
+    </span>
+    <span class="form-item">
+        <label for="birthday">@AccountResource.Birthday</label>
+        <input type="text" class="form-text" id="birthday" name="birthday" value="@Model.Birthday.ToString("dd/MM/yyyy")">
+    </span>
+    <span class="form-item">
+        <label for="idGender">@AccountResource.Gender</label>
+        <input type="text" class="form-text" id="gender" name="email" value="@Model.Gender.Name" disabled="disabled">
+    </span>
+    <span class="form-item">
+        <label>@AccountResource.Phone</label>
+        <div style="float:left; padding-right:1px">
+            <input type="text" class="form-text" style=" width:45px" id="areaCode" name="areaCode" value="@Model.AreaCode" maxlength="2">
+        </div>
+        <input type="text" class="form-text" style=" width:250px" id="number" name="number" value="@Model.Number" maxlength="9">
+    </span>
+    <span class="form-item clear">
+        <label for="email">@AccountResource.Email</label>
+        <input type="text" class="form-text" id="email" name="email" value="@Model.Email" disabled="disabled" maxlength="100">
+    </span>
+
+    <span class="form-item clear">
+        <a href="#" id="showModalEditPassword" title="@AccountResource.EditPassword" class="form-link">@AccountResource.EditPassword</a>
+    </span>
+    <span class="form-item actions">
+        <input type="button" id="registerEdit" value="@AccountResource.Save" class="btn">
+    </span>
+</form>
+@Html.Partial("EditPassword")

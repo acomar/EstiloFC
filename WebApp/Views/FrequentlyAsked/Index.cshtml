@@ -1,0 +1,40 @@
+﻿@using Infrastructure.Resources
+@section description
+{
+    <title>@FrequentlyAskedResource.Title @HomeResource.TagTitle</title>
+    <meta name="description" content="@FrequentlyAskedResource.Introduction">
+}
+@section scripts {
+    @Scripts.Render("~/Scripts/FrequentlyAsked/frequentlyAsked")
+}
+<h2 class="page-title">@FrequentlyAskedResource.Title</h2>
+<p class="intro">@FrequentlyAskedResource.Introduction <a href="@Url.Action("Index", "ContactUs")" title="@FrequentlyAskedResource.ContactUs">@FrequentlyAskedResource.ContactUs</a>@FrequentlyAskedResource.IntroductionSecondPart</p>
+<section class="faq">
+    <dl class="question">
+        <dt>O que é o site Estilo F.C.</dt>
+        <dd><b>Estilo F.C.</b> &eacute; a marca do boleiro. Nossa miss&atilde;o &eacute; levar inspiração e inovação para todos que amam jogar futebol.</dd>
+    </dl>
+ 
+    <dl class="question">
+        <dt>Entregas e Prazos</dt>
+        <dd>
+            <p>O prazo de entrega é calculado com base nos correios, em até 5 dias uteis enviaremos o código de rastreio do pedido.</p>
+            <p>Não esqueça! Nós começamos a contar a data da entrega a partir da data de confirmação de pagamento do seu pedido pela instituição financeira, após a confirmação dos seus dados cadastrais.</p>
+        </dd>
+    </dl>
+    <dl class="question">
+        <dt>Como comprar com pague seguro ?</dt>
+        <dd>
+            <ul class="enum-list">
+                <li>Escolha seus produtos;</li>
+                <li>Confira as informações e clique em "Finalizar pedido" e você será redirecionado para o ambiente seguro do PagSeguro da uol;</li>
+                <li>Insira no PagSeguro, seus dados de pagamento. Seus dados não são enviados para a loja vendedor. Nessa etapa, você deve conferir se está em ambiente PagSeguro, com URL da cor verde, e se o nome da loja confere com a loja em que você está realizando a compra;</li>
+                <li>Escolha o meio de pagamento;</li>
+                <li>Após efetuar o pagamento você será automaticamente redirecionado à loja.</li>
+                <li>Você receberá um e-mail com status da transação, de acordo com o meio de pagamento escolhido;</li>
+                <li>Para saber mais sobre os status de transações do PagSeguro, acesse: Como acompanho o status do meu pagamento? da sua conta PagSeguro</li>
+            </ul>
+        </dd>
+    </dl>
+</section>
+

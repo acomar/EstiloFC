@@ -1,0 +1,167 @@
+﻿@using Infrastructure.Resources
+@model Application.ViewModel.ProductsViewModel
+@section description
+{
+    <title>@Model.FirstProduct.Name @Infrastructure.Resources.HomeResource.TagTitle</title>
+    <meta name="description" content="@Model.FirstProduct.Name, camiseta personalizada, comisas de futebol, camisetas, boleiro">
+    <style>
+        /* Example Styles for Demo */
+        .etabs {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab {
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            background: #000;
+            
+            
+            -moz-border-radius: 4px 4px 0 0;
+            -webkit-border-radius: 4px 4px 0 0;
+        }
+
+            .tab a {
+                font-size: 16px;
+                color: #fff;
+                line-height: 2em;
+                display: block;
+                padding: 0 10px;
+                outline: none;
+            }
+
+                .tab a:hover {
+
+                    text-decoration: underline;
+                }
+
+            .tab.active {
+                border-bottom: solid 2px #95824F;
+                background: #000;
+                color: #fff;
+                padding-top: 6px;
+                position: relative;
+                top: 1px;
+            }
+
+            .tab a.active {
+                color: #fff;
+                font-weight: bold;
+            }
+
+        .tab-container .panel-container {
+            background: #95824F;
+            border-bottom: solid #95824F 2px;
+            padding: 10px;
+          
+        }
+
+        .panel-container {
+            border: solid #95824F 1px;
+            margin-bottom: 10px;
+        }
+    </style>
+}
+
+@section scripts {
+    <script src="~/Scripts/JQuery/jquery.hashchange.min.js"></script>
+    <script src="~/Scripts/JQuery/jquery.easytabs.js"></script>
+    <script src="~/Scripts/Views/Product/productDetail.js"></script>
+}
+<div class="full-content" itemscope itemtype="http://schema.org/Product">
+
+    <div class="carousel productDetail ">
+        <ul>
+            <li><img style="width:330px" itemprop="image" src="@Url.Content(Model.FirstProduct.ImagePath())" alt="@Model.FirstProduct.Name" /></li>
+        </ul>
+    </div>
+
+    <div class="detailBox">
+        <h1> EDIÇÃO LIMITADA</h1>
+        
+        <h2>
+            <span itemprop="model">@Model.FirstProduct.Type</span>
+            <span itemprop="brand">@Model.FirstProduct.Brand</span>
+            -
+            <span itemprop="name">@Model.FirstProduct.Name </span>
+        </h2>
+        
+       
+
+        <div>
+            @if (Model.FirstProduct.Price.OnSale)
+            {
+                <p>De <b class="strike">@Model.FirstProduct.Price.Selling.ToString("C", new System.Globalization.CultureInfo("pt-BR"))</b></p>
+            }
+            <p style="font-size:20px">Por <b itemprop="price">@Model.FirstProduct.Price.GetSallingPrice()</b> </p>
+            <span>@Model.FirstProduct.Price.GetInstallment(3)</span>
+        </div>
+        <div style=" float:left">
+            <h3>COR </h3>
+            <p>
+                <select id="IdColor" name="IdColor" class="form-select"></select>
+            </p>
+
+        </div>
+        <div style="float:left">
+            <h3>TAMANHO</h3>
+            <p>
+                <select id="IdSize" name="IdSize" class="form-select"></select>
+            </p>
+
+        </div>
+        <div style="width:auto;     padding-top: 32px; float:right" class="products-list  actions">
+            <button class="add ">
+                @Html.Hidden("Id", Model.FirstProduct.Id, new { id = "IdProduct" })
+                @Html.Hidden("Name", Model.FirstProduct.Name)
+                @Html.Hidden("Description", Model.FirstProduct.ProductAndDescription())
+                @Html.Hidden("SellingPrice", Model.FirstProduct.Price.GetSallingPrice())
+                @Html.Hidden("ImagePath", Model.FirstProduct.ImagePath())
+                <span>@ProductResource.AddBasket</span>
+            </button>
+        </div>
+
+
+    </div>
+    <div class="detailBoxAction">
+        <div class="actions">
+            <a href="@Url.Action("Index", "Home")" class="btn continuar">@CartResource.ContinueShopping</a>
+            <input type="button" id="finalizeOrder" class="btn finalizar showPageBasket" value="@CartResource.Checkout">
+        </div>
+    </div>
+    @*<div class="showMovie">
+        <a href="#" title="Ver video"></a>
+    </div>*@
+    <div class="detailDescriptionBox detailBorder">
+        <div id="tabs" class="etabs">
+
+            <ul>
+                <li class="tab"><a href="#tabs-1">História</a></li>
+                <li class="tab"><a href="#tabs-2">Material</a></li>
+                <li class="tab"><a href="#tabs-3">Troca e devolução</a></li>
+                @*<li class="tab"><a href="#tabs-4">Tamanhos</a></li>*@
+            </ul>
+            <div id="tabs-1" class="borderDescriptionBox">
+
+                <p>@Model.FirstProduct.ManufacturingData.History</p>
+            </div>
+            <div id="tabs-2" class="borderDescriptionBox">
+
+                <p itemprop="description">@Model.FirstProduct.Description</p>
+            </div>
+            <div id="tabs-3" class="borderDescriptionBox">
+                @Html.Action("PartialExchanges", "Help")
+            </div>
+            @*<div id="tabs-4" class="borderDescriptionBox">
+
+                <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+            </div>*@
+        </div>
+
+
+
+    </div>
+
+</div>

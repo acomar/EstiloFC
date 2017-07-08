@@ -1,0 +1,4 @@
+﻿.top-bar { height: 45px; width: 100%; background: #95824F; border-bottom: solid 1px #000; font-size: 14px; line-height: 45px; color: #000; }
+    .top-bar .inner { width: 100%; height: 45px; margin: 0 auto; text-align: center; }
+    .top-bar a { color: #010101; text-decoration: underline; }
+    .top-bar a:hover { color: #FFF; text-decoration: underline; }

@@ -1,0 +1,172 @@
+﻿.top-parceiro {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 700px;
+    height: 138px;
+    float: right;
+    border-radius: 8px;
+}
+.top-parceiro h2 {
+position: relative;
+margin-top:100px;
+    width: 690px;
+}
+
+.basket {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 235px;
+    height: 138px;
+    background: #95824F;
+    float: right;
+    border-radius: 8px;
+}
+
+    .basket .total {
+        width: 210px;
+        margin: 0 auto;
+        text-align: right;
+        font-size: 22px;
+        color: #95824F;
+        background: #010101;
+        height: 30px;
+        padding: 0 10px;
+        border-radius: 5px;
+        line-height: 30px;
+    }
+
+        .basket .total b {
+            color: #95824F;
+        }
+
+    .basket .deliveryCost {
+        width: 210px;
+        margin: 0 auto;
+        text-align: right;
+        font-size: 22px;
+        color: #95824F;
+        background: #010101;
+        height: 30px;
+        padding: 0 10px;
+        border-radius: 5px;
+        line-height: 30px;
+    }
+
+        .basket .deliveryCost b {
+            color: #95824F;
+        }
+
+        .basket .deliveryCost .teste {
+            border: solid 1px #95824F;
+            color: #FFF;
+            text-align: center;
+        }
+
+    .basket .qtd {
+        font-size: 21px;
+        text-align: right;
+        width: 195px;
+        height: 50px;
+        margin: 25px auto;
+        color: #010101;
+        background-position: 0 -140px;
+    }
+
+        .basket .qtd .number {
+            color: #000;
+        }
+
+        .basket .qtd span {
+            display: block;
+        }
+
+    .basket .empty-basket {
+        background-position: 0 -151px;
+        color: #010101;
+        font-size: 18px;
+        height: 50px;
+        margin: 30px auto 0;
+        padding-left: 50px;
+        width: 155px;
+        display: none;
+    }
+
+        .basket .empty-basket span {
+            display: block;
+        }
+
+.mini-basket {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    z-index: 100;
+    width: 110px;
+    height: 90px;
+    background: #95824F;
+    float: right;
+    border-radius: 8px;
+}
+
+    .mini-basket .total {
+        width: 100px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 12px;
+        color: #95824F;
+        background: #010101;
+        height: 30px;
+        padding-left: 5 padding: 0 10px;
+        border-radius: 5px;
+        line-height: 30px;
+    }
+
+        .mini-basket .total b {
+            color: #95824F;
+        }
+
+    .mini-basket .qtd {
+        font-size: 12px;
+        text-align: left;
+        width: 100px;
+        margin: 10px auto;
+        margin-left: 10px;
+        color: #010101;
+    }
+
+        .mini-basket .qtd .number {
+            color: #000;
+        }
+
+        .mini-basket .qtd span {
+            display: block;
+        }
+
+.promo-code {
+    
+}
+
+    .promo-code .code-item {
+    float: right;
+    
+}
+    
+
+        .promo-code .code-item label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 3px;
+            color: #95824F;
+        }
+
+        .promo-code .code-item .form-text,
+        .promo-code .code-item .form-select {
+            width: 150px;
+            margin-right: 5px;
+        }
+
+    .promo-code .actions {
+        border-top: 1px solid #95824F;
+        float: right;
+        margin-top: 20px;
+        padding-top: 20px;
+        width: 740px;
+    }

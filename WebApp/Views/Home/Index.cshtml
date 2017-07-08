@@ -1,0 +1,15 @@
+﻿@using System.Globalization
+@model Application.ViewModel.ProductsViewModel
+@section description
+{
+    <title>@Infrastructure.Resources.HomeResource.TagTitle</title>
+    <meta name="description" content="A Estilo F.C. é a marca feita por boleiros para boleiros, nasceu da vontade de atender o publico praticante de futebol, com roupas e assessórios exclusivos que criam um estilo único para os praticantes desse esporte espetacular. O que nós da Estilo F.C. e  você temos em comum ?  Somos loucos por futebol.">
+}
+@section scripts {
+    @Scripts.Render("~/Scripts/Product/product")
+    <script src="~/Scripts/JQuery/jquery.rating.js"></script>
+}
+@{
+     Html.RenderAction("GetByFilters", "Product");
+}
+

@@ -1,0 +1,69 @@
+﻿@using Infrastructure.Resources
+@model List<Domain.Entities.Order>
+
+@section description
+{
+    <title>@OrderResource.MyOrders @HomeResource.TagTitle</title>
+}
+@section scripts {
+    <script src="~/Scripts/Views/Order/viewOrder.js"></script>
+}
+<h2 class="page-title">@OrderResource.MyOrders</h2>
+
+<section class="faq">
+    <dl class="question">
+        @foreach (var order in @Model.OrderByDescending(c => c.DateCreated))
+        {
+
+            <dt>
+                @order.DateCreated.ToString("dd/MM/yyyy") -  Numero do pedido: @order.Id <br />
+                Status: @order.OrderStatus.Description
+            </dt>
+            <dd>
+                <table class="tbl tbl-sacola">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Tamanho</th>
+                            <th>Quantidade</th>
+                            <th>Valor Unitário</th>
+                            <th>Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in order.OrderItens)
+                        {
+                            <tr>
+                                <td>
+                                    @item.Product.Name
+                                </td>
+                                <td>
+                                    @item.Size.Code
+                                </td>
+                                <td>
+                                    @item.Quantity
+                                </td>
+                                <td>
+                                    @item.UnitPrice.ToString("C", new System.Globalization.CultureInfo("pt-BR"))
+                                </td>
+                                <td>
+                                    @item.TotalPrice.ToString("C", new System.Globalization.CultureInfo("pt-BR"))
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr class="deliveryCost">
+                            <td colspan="4" style="text-align: right" >Desconto:</td>
+                            <td headers="total">@order.GetDiscount()</td>
+                        </tr>
+                        <tr class="total">
+                            <td colspan="4" class="label">Valor Total:</td>
+                            <td class="soma" headers="total">@order.OrderItens.Sum(c => c.TotalPrice).ToString("C", new System.Globalization.CultureInfo("pt-BR"))</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </dd>
+        }
+    </dl>
+</section>

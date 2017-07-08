@@ -1,0 +1,34 @@
+﻿@model Domain.Entities.Order
+<h2 class="page-title">Obrigado por finalizar seu pedido.</h2>
+
+<p>Olá <span>@ViewBag.UserName</span>!</p>
+<p>A <b>Estilo F.C.</b> agradece a preferencia, confira os dados e efetue o pagamento.</p>
+<div class="orderDone">
+
+    <p>
+        <h2>Dados do Pedido</h2>
+    </p>
+    <table class="tbl tbl-sacola">
+       
+    </table>
+    @foreach (var item in Model.OrderItens)
+    {
+       <p>@item.Quantity  Camiseta  @item.Product.Name</p>
+        @item.Color.Name
+        @item.Size.Name
+        
+        @item.Product.Price.GetSallingPrice()
+    }
+    @Model.GetTotalValue();
+</div>
+<div class="orderDone">
+    <p>
+        <h2>Dados de Correspondências</h2>
+    </p>
+    @Html.Raw(Model.Address.GetFullAddress())
+</div>
+<p style="text-align:center">
+    <img src="~/Content/Images/PaymentIcons/logo_pagseguro209x48.gif" />
+</p>
+<br>
+<p class="assinatura">Equipe Estilo F.C. - Loja virtual</p>

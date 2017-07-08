@@ -1,0 +1,14 @@
+﻿.tbl {background: #000;}
+.tbl th,
+.tbl td {padding: 10px;}
+
+.tbl-sacola {width: 745px; font-size: 14px; border: solid 1px #95824F; margin-bottom: 20px;}
+.tbl-sacola th {background: #95824F; color: #000;}
+.tbl-sacola td {border: solid 1px #95824F;color:#FFF; text-align: center;}
+.tbl-sacola td:nth-child(2) {text-align: center;}
+.tbl-sacola img {max-width: 50px; display: block; margin: 0 auto;}
+.tbl-sacola .pointer-left{cursor: pointer;display: inline-block!important; margin-right: 10px!important; width:16px}
+.tbl-sacola .pointer-right{cursor: pointer;display: inline-block!important; margin-left: 10px!important; width:16px}
+.tbl-sacola .total {font-weight: bold;  font-size: 18px;}
+.tbl-sacola .label {text-align: right;background: #95824F; color: #010101;}
+.tbl-sacola .total .soma {text-align: center;  background: #95824F; color: #000; }

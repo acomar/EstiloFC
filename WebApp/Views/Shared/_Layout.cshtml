@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    @Html.Partial("_LayoutHead")
+    @RenderSection("description", required: false)
+</head>
+<body>
+    <div class="main-wrapper">
+        @Html.Partial("_Header")
+        <section class="content-wrapper">
+            @Html.Action("SideBar", "Home")
+            <main class="main-content ">
+                @Html.Partial("_ModalStructure")
+                @RenderBody()
+                @Html.Partial("_Loading")
+            </main>
+        </section>
+        @Html.Partial("_Footer")
+    </div>
+    @Scripts.Render("~/Scripts/JQuery/jquery")
+    @Scripts.Render("~/Scripts/Views/Shared/shared")
+    @RenderSection("scripts", required: false)
+    @Html.Partial("_ModalLogin")
+    @Html.Partial("_ModalMessage")
+</body>
+@RenderSection("end", required: false)
+</html>

@@ -1,0 +1,5 @@
+﻿.main-nav {width: 1000px; height: 55px; background: #95824F; margin: 10px auto 0; border-radius: 8px;}
+.main-nav .nav {padding: 0 15px;}
+.main-nav .nav li{float: left; line-height: 55px; margin-right: 20px;}
+.main-nav .nav li a {font-size: 18px; color: #000; display: block; transition: 0.5s;}
+.main-nav .nav li a:hover {color: #fff; transition: 0.5s;}

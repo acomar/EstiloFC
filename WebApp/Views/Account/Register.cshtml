@@ -1,0 +1,62 @@
+﻿@using Infrastructure.Resources
+@section description
+{
+    <title>@AccountResource.RegisterTitle @HomeResource.TagTitle</title>
+    <meta name="description" content="@AccountResource.DescriptionRegister">
+}
+@section scripts {
+    @Scripts.Render("~/Scripts/RegisterUser/registerUser")
+}
+<h2 class="page-title">@AccountResource.RegisterTitle</h2>
+<p class="intro">@AccountResource.DescriptionRegister</p>
+<form id="formRegister" action="#" method="post" class="form form-cadastro">
+    <span class="form-item">
+        <label for="firstName">@AccountResource.Name</label>
+        <input type="text" class="form-text" id="firstName" name="firstName" maxlength="50">
+    </span>
+    <span class="form-item">
+        <label for="lastName">@AccountResource.LastName</label>
+        <input type="text" class="form-text" id="lastName" name="lastName" maxlength="50">
+    </span>
+    <span class="form-item">
+        <label for="birthday">@AccountResource.Birthday</label>
+        <input type="text" class="form-text" id="birthday" name="birthday">
+    </span>
+    <span class="form-item">
+        <label for="idGender">@AccountResource.Gender</label>
+        <label for="male" class="form-radio"><input type="radio" checked="checked" id="male" name="gender.id" value="1">@AccountResource.Male</label>
+        <label for="female" class="form-radio"><input type="radio" id="female" name="gender.id" value="2">@AccountResource.Female</label>
+    </span>
+    <span class="form-item">
+        <label for="email">@AccountResource.Email</label>
+        <input type="text" class="form-text" id="email" name="email" maxlength="100">
+    </span>
+    <span class="form-item">
+        <label for="confirmEmail">@AccountResource.ConfirmEmail</label>
+        <input type="text" class="form-text" id="confirmEmail" name="confirmEmail" maxlength="100">
+    </span>
+    <span class="form-item">
+        <label for="password">@AccountResource.Password</label>
+        <input type="password" class="form-text" id="password" name="password" maxlength="10">
+    </span>
+    <span class="form-item">
+        <label for="confirmPassword">@AccountResource.ConfirmPassword</label>
+        <input type="password" class="form-text" id="confirmPassword" name="confirmPassword" maxlength="10">
+    </span>
+    <span class="form-item">
+        <label for="cpf">@AccountResource.Cpf</label>
+        <input type="text" class="form-text" id="cpf" name="cpf">
+    </span>
+    <span class="form-item">
+        <label >@AccountResource.Phone</label>
+        <div style="float:left; padding-right:1px">
+            <input type="text" class="form-text" style=" width:45px" id="areaCode" name="areaCode" maxlength="2">
+        </div>
+        <input type="text" class="form-text" style=" width:250px" id="number" name="number" maxlength="9">
+    </span>
+    <span class="form-item actions clear">
+        <input type="button" id="register" value="@AccountResource.Register" class="btn">
+        <label class="message">@AccountResource.MessageAcceptTermsOfUse <a href="@Url.Action("TermsOfUse", "Institutional")" title="@AccountResource.TermsOfUse" class="message" target="_blank">@AccountResource.TermsOfUse</a>.</label>
+    </span>
+
+</form>

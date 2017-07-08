@@ -1,0 +1,9 @@
+﻿.footer { width: 100%; height: auto; background: #95824F; }
+    .footer .inner { width:100%; margin: 0 auto; height: auto; margin-top: 30px; }
+    .footer .rights { text-align: center; clear: both; color: #010101; font-size: 16px; font-style: normal; }
+    .footer .newsletter li { font-size: 12px !important; }
+    .footer input { font-size: 18px; border: none; padding: 2px 35px 0 12px; border-radius: 6px; color: #FFF; }
+
+
+#btChatAll { width: 150px; height: 30px; position: fixed; border-radius: 8px; bottom: -5px; right: 10px; background-color: #95824F; padding: 5px 0; cursor: pointer; z-index: 20001; }
+#btChatAllText { font-size: 14px; text-align: center; color: #010101; font-family: "Trebuchet MS",Helvetica,sans-serif; }

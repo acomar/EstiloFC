@@ -1,0 +1,22 @@
+﻿@using Infrastructure.Resources
+
+<nav class="main-nav">
+   
+    <ul class="nav">
+        <li><a href="@Url.Action("Index", "Home")">@MenuResource.Home</a></li>
+        <li><a href="#" class="showPageBasket">@MenuResource.YourBasket</a></li>
+        <li><a href="@Url.Action("Index", "FrequentlyAsked")">@MenuResource.FrequentlyAskedQuestions</a></li>
+        <li><a href="#" class="showModalFeedback" title="Deixe sua opinião">@MenuResource.WhatDidYouThink</a></li>
+        <li><a href="@Url.Action("Index", "ContactUs")">@MenuResource.Contact</a></li>
+        @*<li><a href="@Url.Action("Index", "Collection")">@MenuResource.MyColletion</a></li>*@
+    </ul>
+    <section class="search">
+        @using (Html.BeginForm("Index", "Home"))
+        {
+            <div class="form-field">
+                <input type="text" class="text" id="searchText" name="searchText">
+                <input type="submit" placeholder="O que você procura ?" value="@MenuResource.Search" class="btn">
+            </div>
+        }
+    </section>
+</nav>

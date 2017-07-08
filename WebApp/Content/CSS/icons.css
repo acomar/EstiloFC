@@ -1,0 +1,4 @@
+﻿.categories .title,
+.products-list .add,
+.main-header .basket .qtd,
+.main-header .basket .empty-basket { background-image: url(../Images/sprite_icons.png); background-repeat: no-repeat; }

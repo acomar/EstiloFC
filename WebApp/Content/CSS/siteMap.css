@@ -1,0 +1,14 @@
+﻿.site-map {float: left; width: 210px; margin: 50px 0px 0 15px; padding-left: 50px; color: #000; font-size: 15px; }
+
+.site-map li:first-child h3 {color: #010101;padding-bottom:15px; font-weight: normal; font-size: 18px;}
+.site-map li { padding-bottom:3px;}
+.site-map li a {display: block; transition: 0.5s; color: #000; font-size: 15px;}
+.site-map li a:hover {transition: 0.5s; color: #FFF;}
+.flag { }
+
+.site-map-big {float: left; width: 270px; margin: 50px 0px 0 15px; padding-left: 50px; color: #000; font-size: 15px; }
+.site-map-big li { padding-bottom:5px;}
+.site-map-big li:first-child h3 {color: #010101;padding-bottom:15px; font-weight: normal; font-size: 18px;}
+.site-map-big li a {display: block; transition: 0.5s; color: #000; font-size: 15px;}
+.site-map-big li a:hover {transition: 0.5s; color: #FFF;}
+.flag { }
